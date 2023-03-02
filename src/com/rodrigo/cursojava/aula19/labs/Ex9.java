@@ -2,10 +2,10 @@ package com.rodrigo.cursojava.aula19.labs;
 
 import java.util.Scanner;
 
-public class Ex7 {
-	
+public class Ex9 {
+
 	public static void main(String[] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
 		
 		int[] vetorA = new int[10];
@@ -30,8 +30,6 @@ public class Ex7 {
 			System.out.print(vetorA[i] + " ");
 		}
 		
-		System.out.println();
-		
 		System.out.print("Valor de B = ");
 		
 		for (int i = 0; i < vetorB.length; i++) {
@@ -39,11 +37,12 @@ public class Ex7 {
 		}
 		
 		System.out.println();
-		
-		System.out.print("Valor do vetor C que é a subtração dos elementos de  A e B =  ");
+
+		System.out.print("Valor de C que é a divisão dos elementos de A e B = ");
 		
 		for (int i = 0; i < vetorC.length; i++) {
-			System.out.print((vetorC[i] = vetorA[i] - vetorB[i]) + " ");
+			System.out.print((vetorC[i] = vetorA[i] / vetorB[i]) + " ");
 		}
 	}
+
 }
