@@ -1,3 +1,3 @@
 # what-is-wrong-with-me
 
-estudo de algoritmo com java.
+estudo java.
