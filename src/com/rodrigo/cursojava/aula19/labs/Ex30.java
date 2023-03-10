@@ -13,24 +13,34 @@ public class Ex30 {
 			vetorA[i] = (int)Math.round(Math.random() * 9);
 		}
 		
-		for (int i = 0; i < vetorB.length; i++) {
+		for (int i = 0, j = 0, k = (vetorA.length - 1); i < vetorB.length; i++) {
 			
 			if (vetorA[i] % 2 == 0) {
 				
-				vetorB[i] = vetorA[i];
+				vetorB[j] = vetorA[i];
+				j++;
+			}
+			else {
+				
+				vetorB[k] = vetorA[i];
+				k--;
 			}
 		}
 		
-		for (int i = 0; i < vetorB.length; i++) {
-			
-			System.out.print(vetorB[i] + " ");
-		}
-		
-		System.out.println();
+		System.out.print("Vetor A sem filtro de números pares e ímpares = ");
 		
 		for (int i = 0; i < vetorA.length; i++) {
 			
 			System.out.print(vetorA[i] + " ");
+		}
+		
+		System.out.println();
+
+		System.out.print("Vetor B com filtro de números pares e ímpares = ");
+		
+		for (int i = 0; i < vetorB.length; i++) {
+			
+			System.out.print(vetorB[i] + " ");
 		}
 	}
 }

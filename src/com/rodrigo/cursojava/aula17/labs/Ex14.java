@@ -14,7 +14,7 @@ public class Ex14 {
 			System.out.println("Digite o número");
 			numeros = entrada.nextInt();
 			
-			if(numeros%2!=0) {
+			if(numeros % 2 != 0) {
 				pares++; 
 			} else {
 				impares++;
