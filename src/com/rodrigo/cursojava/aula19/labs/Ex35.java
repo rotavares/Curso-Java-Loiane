@@ -1,7 +1,5 @@
 package com.rodrigo.cursojava.aula19.labs;
 
-import java.util.Iterator;
-
 public class Ex35 {
 
 	public static void main(String[] args) {
