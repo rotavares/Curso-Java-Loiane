@@ -126,6 +126,37 @@ public class Ex6 {
 				System.out.println();
 			}
 
+			if ((jogoVelha[0][0] == 'X' && jogoVelha[0][2] == 'X' && jogoVelha[0][4] == 'X')
+					|| (jogoVelha[2][0] == 'X' && jogoVelha[2][2] == 'X' && jogoVelha[2][4] == 'X')
+					|| (jogoVelha[4][0] == 'X' && jogoVelha[4][2] == 'X' && jogoVelha[4][4] == 'X')
+					|| (jogoVelha[0][0] == 'X' && jogoVelha[2][0] == 'X' && jogoVelha[4][0] == 'X')
+					|| (jogoVelha[0][2] == 'X' && jogoVelha[2][2] == 'X' && jogoVelha[4][2] == 'X')
+					|| (jogoVelha[0][4] == 'X' && jogoVelha[2][4] == 'X' && jogoVelha[4][4] == 'X')
+					|| (jogoVelha[4][4] == 'X' && jogoVelha[2][2] == 'X' && jogoVelha[0][0] == 'X')
+					|| (jogoVelha[0][4] == 'X' && jogoVelha[2][2] == 'X' && jogoVelha[4][0] == 'X')) {
+
+				ganhou = true;
+
+				System.out.println("Jogador 1 ganhou!");
+			} else if ((jogoVelha[0][0] == 'O' && jogoVelha[0][2] == 'O' && jogoVelha[0][4] == 'O')
+					|| (jogoVelha[2][0] == 'O' && jogoVelha[2][2] == 'O' && jogoVelha[2][4] == 'O')
+					|| (jogoVelha[4][0] == 'O' && jogoVelha[4][2] == 'O' && jogoVelha[4][4] == 'O')
+					|| (jogoVelha[0][0] == 'O' && jogoVelha[2][0] == 'O' && jogoVelha[4][0] == 'O')
+					|| (jogoVelha[0][2] == 'O' && jogoVelha[2][2] == 'O' && jogoVelha[4][2] == 'O')
+					|| (jogoVelha[0][4] == 'O' && jogoVelha[2][4] == 'O' && jogoVelha[4][4] == 'O')
+					|| (jogoVelha[4][4] == 'O' && jogoVelha[2][2] == 'O' && jogoVelha[0][0] == 'O')
+					|| (jogoVelha[0][4] == 'O' && jogoVelha[2][2] == 'O' && jogoVelha[4][0] == 'O')) {
+
+				ganhou = true;
+
+				System.out.println("Jogador 2 ganhou!");
+			} else if (jogada > 9) {
+
+				ganhou = true;
+
+				System.out.println("Empate!");
+			}
+
 		}
 
 		entrada.close();
