@@ -2,9 +2,12 @@ package com.rodrigo.cursojava.aula24.labs;
 
 public class Lamp {
 
-	String marca;
 	String modelo;
+	String tensao;
+	int potencia;
 	String cor;
-	int wats;
-	boolean bivolt;
+	String tipoLuz;
+	int garantiaMeses;
+	String[] tipos;
+	boolean tipoAbajur;
 }
