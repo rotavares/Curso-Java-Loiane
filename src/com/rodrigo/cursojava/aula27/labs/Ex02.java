@@ -10,8 +10,7 @@ public class Ex02 {
 		contaRodrigo.especial = true;
 		contaRodrigo.limiteEspecial = 300;
 		contaRodrigo.saldo = 180;
-		
+
 		contaRodrigo.IniciarMenu();
-		
 	}
 }
