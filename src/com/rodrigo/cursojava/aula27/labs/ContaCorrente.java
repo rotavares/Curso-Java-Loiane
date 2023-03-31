@@ -10,54 +10,41 @@ public class ContaCorrente {
 	double limiteEspecial;
 	double saldo;
 
-	double sacarDinheiro(double valor) {
+	void sacarDinheiro(double valor) {
 
-		double saldoAtual;
-
-		if (especial) {
-
-			limiteEspecial = limiteEspecial - valor;
-
-			return limiteEspecial;
+		if (saldo >= valor) {
+			saldo -= valor;
 		} else {
-
-			saldoAtual = saldo - valor;
-
-			saldo = saldoAtual;
-
-			return saldoAtual;
+			System.out.println("Não é possível sacar esse valor");
 		}
 	}
 
-	double depositarDinheiro(double valor) {
+	void depositarDinheiro(double valor) {
 
-		double saldoAtual = saldo + valor;
-
-		return saldoAtual;
+		saldo += valor;
 	}
 
-	double consultarSaldo(boolean consultarEspecial) {
+	void consultarSaldo() {
 
-		if (consultarEspecial) {
-
-			return limiteEspecial;
-		} else {
-
-			return saldo;
-		}
+		System.out.println("Saldo = R$ " + saldo);
 	}
 
-	void IniciarMenu() {
+	void consultarEspecial() {
 
+		System.out.println("Limite especial = R$ " + especial);
+	}
+	
+	void exibirOpcoes() {
+		System.out.println("'1' Consultar saldo | '2' Depositar | '3' Sacar | '0' Sair");
+	}
+	
+	void opcoes() {
+		
 		Scanner scan = new Scanner(System.in);
-
+		
 		boolean sair = false;
 
 		while (!sair) {
-
-			System.out.println("'1' Consultar saldo | '2' Depositar | '3' Sacar | '0' Sair");
-
-			System.out.println();
 
 			byte escolha = scan.nextByte();
 
@@ -71,19 +58,19 @@ public class ContaCorrente {
 
 					if (resposta == 's' || resposta == 'S') {
 
-						System.out.println("Limite especial = " + consultarSaldo(especial));
+						consultarEspecial();
 
-						System.out.println("Saldo = " + consultarSaldo(false));
+						consultarSaldo();
 
 					} else if (resposta == 'n' || resposta == 'N') {
 
-						System.out.println("Saldo = " + consultarSaldo(false));
+						consultarSaldo();
 
 					}
 
 				} else {
 
-					System.out.println("Saldo = " + consultarSaldo(especial));
+					consultarSaldo();
 
 				}
 
@@ -109,7 +96,7 @@ public class ContaCorrente {
 
 				sacarDinheiro(valorSaque);
 
-				System.out.println("Seu saldo atual = " + consultarSaldo(false));
+				consultarSaldo();
 
 				break;
 
@@ -125,10 +112,16 @@ public class ContaCorrente {
 
 				break;
 			}
-
+			scan.close();
 		}
+		
+	}
 
-		scan.close();
+	void IniciarMenu() {
+		
+		exibirOpcoes();
+
+		opcoes();
 
 	}
 

@@ -10,17 +10,31 @@ public class Lamp {
 	int garantiaMeses;
 	String[] tipos;
 	boolean tipoAbajur;
+	boolean ligada;
 	
-	String ligarDesligarLuz(boolean interruptor) {
+	void ligar() {
+		ligada = true;
+	}
+	
+	void desligar() {
+		ligada = false;
+	}
+	
+	void mostrarEstado() {
 		
-		String statusLampada;
-		
-		if (interruptor) {
-			statusLampada = "Lampada ligada";
+		if (ligada) {
+			System.out.println("Lampada está ligada");
 		} else {
-			statusLampada = "Lampada desligada";
+			System.out.println("Lâmpada está desligada");
 		}
+	}
 	
-		return statusLampada;
-	} 
+	void mudarEstado() {
+		if (ligada) {
+			desligar();
+		} else {
+			ligar();
+		}
+	}
+	
 }

@@ -12,12 +12,20 @@ public class Ex01 {
 		lampada.cor = "Amarela";
 		lampada.tipoLuz = "LED";
 		lampada.tipoAbajur = true;
-
 		lampada.tipos = new String[5];
-
 		lampada.tipos[0] = "Abajur";
 		lampada.tipos[1] = "Lampeões";
+
+		lampada.ligar();
+
+		lampada.mostrarEstado();
+
+		lampada.desligar();
+
+		lampada.mostrarEstado();
 		
-		System.out.println(lampada.ligarDesligarLuz(false));
+		lampada.mudarEstado();
+		
+		lampada.mostrarEstado();
 	}
 }
